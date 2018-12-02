@@ -40,9 +40,9 @@ for i in range(10):
     c = 1
     for (image, label, pred) in zip(images,labels,p_val):
         prediction, actual = np.argmax(pred), np.argmax(label)
-        if prediction != i:
+        if prediction != i:     # 예상한 값이 0~9 까지 를 확인
             continue
-        if (c < 4 and i == actual) or (c>= 4 and i != actual):
+        if (c < 4 and i == actual) or (c>= 4 and i != actual):      # 왼쪽 3개는 정답, 오른쪽 3개는 오류
             subplot = fig.add_subplot(10,6,i*6+c)
             subplot.set_xticks([])
             subplot.set_yticks([])
