@@ -24,7 +24,7 @@ images,labels = mnist.train.next_batch(10)      # 10개의 데이터를 추출
 
 print(images[0])
 print(labels[0])
-
+print("hello")
 fig = plt.figure(figsize=(8,4))
 for c, (image, label) in enumerate(zip(images, labels)):        #zip함수를 이용하여 images와 labels을 병렬적으로 묶은 다음, enumerate를 이용하여 순서와 묶음을 c 와(image,label)에 넣는다.
     subplot = fig.add_subplot(2,5,c+1)
